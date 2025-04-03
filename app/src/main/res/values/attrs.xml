@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LongShadowText">
+        <attr name="ls_arrayColor" format="reference" />
+        <attr name="ls_blurWidth" format="dimension" />
+        <attr name="ls_enabledAlpha" format="boolean" />
+        <attr name="ls_fontFamily" format="reference" />
+        <attr name="ls_multiColor" format="boolean"/>
+        <attr name="ls_shadow_angle" format="integer"/>
+        <attr name="ls_shadowColor" format="color"/>
+        <attr name="ls_shadowLength" format="dimension"/>
+        <attr name="ls_text" format="string"/>
+        <attr name="ls_textColor" format="color"/>
+        <attr name="ls_textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="LongShadowImage">
+        <attr name="lsi_enabledAlpha" format="boolean" />
+        <attr name="lsi_icon" format="reference"/>
+        <attr name="lsi_iconColor" format="color"/>
+        <attr name="lsi_iconSize" format="dimension"/>
+        <attr name="lsi_shadow_angle" format="integer"/>
+        <attr name="lsi_shadowColor" format="color"/>
+        <attr name="lsi_shadowLength" format="dimension"/>
+
+    </declare-styleable>
+
+
+</resources>

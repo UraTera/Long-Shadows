@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?><!--<com.sdsmdg.harjot.longshadows.LongShadowsWrapper -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/lineText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lineSlider"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.tera.long_shadows.LongShadowText
+            android:id="@+id/lsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:ls_arrayColor="@array/colorShadow"
+            app:ls_blurWidth="5dp"
+            app:ls_enabledAlpha="true"
+            app:ls_fontFamily="@font/comic"
+            app:ls_shadowColor="@color/red"
+            app:ls_shadowLength="50dp"
+            app:ls_text="@string/hello"
+            app:ls_textColor="@color/white"
+            app:ls_multiColor="true"
+            app:ls_textSize="50sp" />
+
+        <com.tera.long_shadows.LongShadowImage
+            android:id="@+id/lsIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:lsi_enabledAlpha="true"
+            app:lsi_icon="@drawable/ic_star_color"
+            app:lsi_iconSize="30dp"
+            app:lsi_shadowColor="@color/gray"
+            app:lsi_shadowLength="50dp"
+            app:lsi_shadow_angle="45" />
+        <!--            app:lsi_iconColor="@color/red"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineSlider"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lineText"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chAlpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alpha" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+
+        <CheckBox
+            android:id="@+id/chMulti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multi Color" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+
+        <CheckBox
+            android:id="@+id/chFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bnTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text color" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/bnShadowColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shadow color" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text size" />
+
+        <com.tera.slider.SliderCustom
+            android:id="@+id/slSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:valueMax="@dimen/max_size"
+            app:valueMin="@dimen/min_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length of shadow" />
+
+        <com.tera.slider.SliderCustom
+            android:id="@+id/slLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:valueMax="@dimen/max_length" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shadow angle:" />
+
+            <TextView
+                android:id="@+id/tvAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="0°" />
+
+        </LinearLayout>
+
+        <com.tera.slider.SliderCustom
+            android:id="@+id/slAngle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:valueMax="360" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blur width:" />
+
+        <com.tera.slider.SliderCustom
+            android:id="@+id/slBlur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:valueMax="@dimen/max_blur" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

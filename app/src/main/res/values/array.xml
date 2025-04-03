@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="colorShadow">
+        <item>#FF0000</item>
+        <item>#00FF00</item>
+        <item>#0000FF</item>
+        <item>-936674</item>
+        <item>-8718603</item>
+    </array>
+
+</resources>
