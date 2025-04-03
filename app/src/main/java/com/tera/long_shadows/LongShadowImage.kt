@@ -144,10 +144,20 @@ class LongShadowImage(
         mYc = h / 2f
     }
 
+    var icon: Int? = 0
+        set(value) {
+            field = value
+            if (value != null && mIconSize > 0) {
+                mIcon = value
+                setBitmaps()
+                invalidate()
+            }
+        }
+
     var iconColor: Int = 0
         set(value) {
             field = value
-            if (mBitmapIcon != null && mIconColor != 0) {
+            if (mBitmapIcon != null){
                 mIconColor = value
                 mBitmapIcon = u.colorBitmap(mBitmapIcon!!, mIconColor)
             }

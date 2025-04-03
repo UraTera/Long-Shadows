@@ -109,20 +109,24 @@ class MainActivity : AppCompatActivity() {
         val font2 = resources.getFont(R.font.candice)
         val font3 = resources.getFont(R.font.cyrillichover)
         val font4 = resources.getFont(R.font.casanova)
+        val icon1 = R.drawable.ic_circle
+        val icon2 = R.drawable.ic_star_color
 
         if (mKeyFont) {
             lsText.fontFamily = font1
+//            lsIcon.icon = icon1
 //            lsText.text = "Hello"
         }
         else {
             lsText.fontFamily = font4
+//            lsIcon.icon = icon2
 //            lsText.text = "World!"
         }
     }
 
     private fun setColor() = with(binding) {
         lsText.textColor = mViewColor
-        lsIcon.iconColor = mViewColor
+//        lsIcon.iconColor = mViewColor
 
         lsText.shadowColor = mShadowColor
         lsIcon.shadowColor = mShadowColor

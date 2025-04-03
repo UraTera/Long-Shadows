@@ -112,7 +112,7 @@
                 android:id="@+id/bnTextColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Text color" />
+                android:text="View color" />
 
             <Space
                 android:layout_width="10dp"
