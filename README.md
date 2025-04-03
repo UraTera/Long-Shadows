@@ -6,7 +6,7 @@ To use the ready-made library, add the dependency:
 ```
 dependencies {
 
-    implementation("io.github.uratera:long_shadows:1.0.1")
+    implementation("io.github.uratera:long_shadows:1.0.2")
 }
 ```
 **Usage:**
@@ -41,7 +41,7 @@ dependencies {
 |Attributes       |Description     |Related methods|
 |-----------------|----------------|---------------|
 |lsi_enabledAlpha |Enable A-channel|setEnabledAlpha
-|lsi_icon         |Icon            | |
+|lsi_icon         |Icon            |setIcon
 |lsi_iconColor    |Icon color      |setIconColor
 |lsi_iconSize     |Icon size       |setIconSize
 |lsi_shadow_angle |Shadow angle    |setShadowAngle
