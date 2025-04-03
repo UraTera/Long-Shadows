@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">Long-Shadows</string>
+    <string name="app_name" translatable="false">Long-Shadows</string>
 
     <string name="hello">Hello World!</string>
+    <string name="alpha">Alpha</string>
+    <string name="multi">Multi Color</string>
+    <string name="font">Font</string>
+    <string name="view_color">View color</string>
+    <string name="shadow_color">Shadow color</string>
+    <string name="text_size">Text size</string>
+    <string name="length_shadow">Length of shadow</string>
+    <string name="shadow_angle">Shadow angle:</string>
+    <string name="_0" translatable="false">0°</string>
+    <string name="blur_width">Blur width</string>
 
 </resources>

@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="hello">Привет, Мир!</string>
+    <string name="alpha">Альфа</string>
+    <string name="multi">Многоцвет</string>
+    <string name="font">Шрифт</string>
+    <string name="view_color">Цвет вида</string>
+    <string name="shadow_color">Цвет тени</string>
+    <string name="text_size">Размер текста</string>
+    <string name="length_shadow">Длина тени</string>
+    <string name="shadow_angle">Угол тени:</string>
+    <string name="blur_width">Ширина размытия</string>
+
+</resources>

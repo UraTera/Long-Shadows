@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="HardcodedText">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/lineText"
@@ -50,7 +49,6 @@
             app:lsi_iconSize="30dp"
             app:lsi_shadowColor="@color/gray"
             app:lsi_shadowLength="50dp" />
-        <!--            app:lsi_iconColor="@col//or/red"/>-->
 
     </LinearLayout>
 
@@ -78,27 +76,27 @@
             android:id="@+id/chAlpha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alpha" />
+            android:text="@string/alpha" />
 
         <Space
-            android:layout_width="15dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent" />
 
         <CheckBox
             android:id="@+id/chMulti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Multi Color" />
+            android:text="@string/multi" />
 
         <Space
-            android:layout_width="5dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent" />
 
         <CheckBox
             android:id="@+id/chFont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Font" />
+            android:text="@string/font" />
 
     </LinearLayout>
 
@@ -117,7 +115,7 @@
             android:id="@+id/bnTextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View color" />
+            android:text="@string/view_color" />
 
         <Space
             android:layout_width="10dp"
@@ -127,10 +125,9 @@
             android:id="@+id/bnShadowColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shadow color" />
+            android:text="@string/shadow_color" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/lineSlider"
@@ -150,7 +147,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Text size" />
+            android:text="@string/text_size" />
 
         <com.tera.slider.SliderCustom
             android:id="@+id/slSize"
@@ -162,7 +159,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Length of shadow" />
+            android:text="@string/length_shadow" />
 
         <com.tera.slider.SliderCustom
             android:id="@+id/slLength"
@@ -179,14 +176,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shadow angle:" />
+                android:text="@string/shadow_angle" />
 
             <TextView
                 android:id="@+id/tvAngle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="0°" />
+                android:text="@string/_0" />
 
         </LinearLayout>
 
@@ -199,7 +196,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blur width:" />
+            android:text="@string/blur_width" />
 
 
         <com.tera.slider.SliderCustom
