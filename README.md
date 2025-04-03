@@ -23,28 +23,29 @@ dependencies {
 ```
 
 ### Attributes LongShadowText
-|Attributes      |Description |
-|----------------|------------|
-|ls_arrayColor   |Array of colors
-|ls_blurWidth    |Blur width
-|ls_enabledAlpha |Enable A-channel
-|ls_fontFamily   |Font
-|ls_multiColor   |Multi color
-|ls_shadow_angle |Shadow angle
-|ls_shadowColor  |Shadow color
-|ls_shadowLength |Shadow length
-|ls_text         |Text
-|ls_textColor    |Text color
-|ls_textSize     |Text size
+|Attributes      |Description     |Related methods|
+|----------------|----------------|---------------|
+|ls_arrayColor   |Array of colors |setArrayColor
+|ls_blurWidth    |Blur width      |setBlurWidth
+|ls_enabledAlpha |Enable A-channel|setEnabledAlpha
+|ls_fontFamily   |Font            |setFontFamily
+|ls_multiColor   |Multi color     |setMulticolor
+|ls_shadow_angle |Shadow angle    |setShadowAngle
+|ls_shadowColor  |Shadow color    |setShadowColor
+|ls_shadowLength |Shadow length   |setShadowLength
+|ls_text         |Text            |setText
+|ls_textColor    |Text color      |setTextColor
+|ls_textSize     |Text size       |setTextSize
 
 ### Attributes LongShadowImage
-|Attributes       |Description |
-|-----------------|------------|
-|lsi_enabledAlpha |Enable A-channel
-|lsi_icon         |Icon
-|lsi_iconColor    |Icon color
-|lsi_iconSize     |Icon size
-|lsi_shadow_angle |Shadow angle
-|lsi_shadowColor  |Shadow color
-|lsi_shadowLength |Shadow length
+|Attributes       |Description     |Related methods|
+|-----------------|----------------|---------------|
+|lsi_enabledAlpha |Enable A-channel|setEnabledAlpha
+|lsi_icon         |Icon            | |
+|lsi_iconColor    |Icon color      |setIconColor
+|lsi_iconSize     |Icon size       |setIconSize
+|lsi_shadow_angle |Shadow angle    |setShadowAngle
+|lsi_shadowColor  |Shadow color    |setShadowColor
+|lsi_shadowLength |Shadow length   |setShadowLength
+
 
