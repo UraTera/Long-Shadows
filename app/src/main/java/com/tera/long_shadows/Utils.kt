@@ -2,6 +2,7 @@ package com.tera.long_shadows
 
 import android.graphics.Bitmap
 import kotlin.math.cos
+import kotlin.math.roundToInt
 import kotlin.math.sin
 
 class Utils {
@@ -12,8 +13,8 @@ class Utils {
 
     fun moveBitmap(bm: Bitmap, angle: Float): Bitmap {
         val w = bm.width + DIFF * 3
-        val dx = "%.0f".format(dX(angle) * DIFF).toInt()
-        val dy = "%.0f".format(dY(angle) * DIFF).toInt()
+        val dx = (dX(angle) * DIFF).roundToInt()
+        val dy = (dY(angle) * DIFF).roundToInt()
 
         val bmRes = Bitmap.createBitmap(w, w, Bitmap.Config.ARGB_8888)
 
