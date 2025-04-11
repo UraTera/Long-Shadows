@@ -9,6 +9,7 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Typeface
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import kotlin.math.max
 
@@ -43,7 +44,8 @@ class LongShadowText(
     private var mYt = 0f
     private var mRect = Rect()
     private var mBlurStyle: Blur? = Blur.NORMAL
-    private var mArray = ArrayList<String>()
+    private var mArrayChar = ArrayList<String>()
+    private lateinit var mArrayWidth: FloatArray
     private var mLastIndex = 0
     private var mRatioAlpha = 0f
 
@@ -123,9 +125,12 @@ class LongShadowText(
             mPaintShadow.setMaskFilter(null)
 
         if (mText != null && mMultiColor) {
-            mArray = u.strToArray(mText!!)
+            mArrayChar = u.strToArray(mText!!)
+            mArrayWidth = FloatArray(mText!!.length)
+            mPaintText.getTextWidths(mText, mArrayWidth)
             if (mArrayColor != null)
                 mLastIndex = u.lastIndex(mText!!, mArrayColor!!)
+
         }
     }
 
@@ -154,6 +159,7 @@ class LongShadowText(
 
     private fun drawShadowRight(canvas: Canvas) {
         val wText = mPaintText.measureText(mText)
+
         var x = mXc - wText / 2
 
         var nColor = 0
@@ -164,8 +170,7 @@ class LongShadowText(
             nColor = mArrayColor!!.size
         }
 
-        for (i in mArray.indices) {
-            val ws = mPaintShadow.measureText(mArray[i])
+        for (i in mArrayChar.indices) {
             if (mArrayColor != null) {
                 if (indColor >= nColor) indColor = 0
                 color = mArrayColor!![indColor]
@@ -174,15 +179,15 @@ class LongShadowText(
                 color = (Math.random() * 16777215).toInt() or (0xFF shl 24)
 
             mPaintShadow.color = color
-            drawShadow(canvas, mArray[i], x)
-            x += ws
+            drawShadow(canvas, mArrayChar[i], x)
+            x += mArrayWidth[i]
         }
     }
 
     private fun drawShadowLeft(canvas: Canvas) {
         val wText = mPaintText.measureText(mText)
         var x = mXc + wText / 2
-        val indSym = mArray.size - 1
+        val indSym = mArrayChar.size - 1
         var nColor = 0
         var indColor = mLastIndex
         var color: Int
@@ -195,7 +200,6 @@ class LongShadowText(
         else mPaintShadow.style = Paint.Style.FILL
 
         for (i in indSym downTo 0) {
-            val ws = mPaintShadow.measureText(mArray[i])
             if (mArrayColor != null) {
                 if (indColor < 0) indColor = indSym
                 if (indColor > nColor) indColor = nColor
@@ -204,9 +208,9 @@ class LongShadowText(
             } else
                 color = (Math.random() * 16777215).toInt() or (0xFF shl 24)
 
-            x -= ws
+            x -= mArrayWidth[i]
             mPaintShadow.color = color
-            drawShadow(canvas, mArray[i], x)
+            drawShadow(canvas, mArrayChar[i], x)
         }
     }
 
@@ -290,6 +294,7 @@ class LongShadowText(
             mPaintText.typeface = value
             mPaintShadow.typeface = value
             setSize()
+            setParams()
             invalidate()
         }
 
